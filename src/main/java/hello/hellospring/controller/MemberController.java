@@ -19,7 +19,9 @@ public class MemberController {
 
     @Autowired  //연결시켜줄떄
     public MemberController(MemberService memberService) {
+
         this.memberService = memberService;
+        System.out.println("memberService= " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
